@@ -7,7 +7,7 @@ app = FastAPI()
 # Función de conexión a la BD en el contenedor Docker
 def get_db():
     return mysql.connector.connect(
-        host="localhost",
+        host="mysql-db", # <--- Solo cambia esto
         user="root",
         password="rootpassword",
         database="taller_db",
